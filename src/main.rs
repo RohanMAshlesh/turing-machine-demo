@@ -7,6 +7,7 @@ use std::collections::HashMap;
 // type Instr = [u8; 5];
 
 // Helper function
+//helper function for turing machine
 fn copy_into_array<A, T>(slice: &[T]) -> A
 where
   A: Sized + Default + AsMut<[T]>,
@@ -29,7 +30,7 @@ struct Turing {
   pos: usize,
   curr: u8,
 }
-
+//turing
 impl Turing {
   // Constructor
   pub fn new() -> Turing {
@@ -114,7 +115,7 @@ impl Turing {
 
     self
   }
-
+//function
   fn get_tape(&self) -> String {
     String::from_utf8(self.tape.clone()).unwrap()
   }
